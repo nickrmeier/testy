@@ -1,0 +1,14 @@
+<h2>{{ collection.title }} <a href="">(edit)</a></h2>
+
+<h3>Cards THIS IS collection detail<a href="">(+)</a></h3>
+<ul>
+    {% for card in collection.cards.all %}
+    <li>
+        <a href="{% url 'flashcard_detail' pk=card.pk %}">{{ card.question }}</a>
+    </li>
+    {% endfor %}
+
+    
+</ul>
+
+<h3><a href="{% url 'collection_list' %}">Home</a></h3>

@@ -1,0 +1,8 @@
+<h2>Collections <a href="">(+)</a></h2>
+<ul>
+    {% for collection in collections %}
+    <li>
+        <a href="{% url 'collection_detail' pk=collection.pk %}">{{ collection.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
