@@ -1,6 +1,6 @@
-<h2>{{ collection.title }} <a href="">(edit)</a></h2>
+<h2>{{ collection.title }} <a href="{% url 'collection_edit' pk=collection.pk %}">(edit)</a></h2>
 
-<h3>Cards<a href="">(+)</a></h3>
+<h3>Cards<a href="{% url 'flashcard_create' %}">(+)</a></h3>
 <ul>
     {% for card in collection.cards.all %}
     <li>
@@ -10,5 +10,7 @@
 
 
 </ul>
+
+<a href="{% url 'collection_delete' pk=collection.pk %}">Delete</a>
 
 <h3><a href="{% url 'collection_list' %}">Home</a></h3>

@@ -6,3 +6,9 @@ class CollectionForm(forms.ModelForm):
     class Meta:
         model = CardCollection
         fields = ('title',)
+
+class FlashCardForm(forms.ModelForm):
+
+    class Meta:
+        model = FlashCard
+        fields = ('collection', 'question', 'answer',)

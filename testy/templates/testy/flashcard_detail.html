@@ -1,4 +1,4 @@
-<h2>{{ card.question }} <a href="">(edit)</a></h2>
+<h2>{{ card.question }} <a href="{% url 'flashcard_delete' pk=card.pk %}">(delete)</a></h2>
 <h3>{{ card.answer }}</h3>
 
 <button onclick="goBack()">Back to Collection</button>
