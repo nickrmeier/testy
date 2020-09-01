@@ -56,6 +56,7 @@ def collection_delete(request, pk):
     CardCollection.objects.get(id=pk).delete()
     return redirect('collection_list')
 
+
 def flashcard_delete(request, pk):
     card = FlashCard.objects.get(id=pk).delete()
     return redirect('collection_list')
